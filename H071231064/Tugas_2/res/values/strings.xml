@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">pert1</string>
+    <string name="button_name">Tombol Satu</string>
+    <string name="Message">Message</string>
+    <string name="Highlights">Highlights</string>
+    <string name="About">About</string>
+    <string name="Back">Back</string>
+    <string name="search">Search</string>
+    <string name="a_m_yusran_mazidan">A.M.Yusran Mazidan</string>
+    <string name="highlight_title">You both studied at Universitas Hasanuddin</string>
+    <string name="highlight_description">You both studied at Universitas Hasanuddin from 2021 to 2025</string>
+    <string name="profile_description">Full Stack Web Developer | Graphic Designer | Project Manager | Information System Student at Hasanuddin University (Undergraduate)</string>
+    <string name="affiliation">Hasanuddin University | Universitas Hasanuddin (Unhas)</string>
+    <string name="address">Makassar, South Sulawesi, Indonesia</string>
+    <string name="about_description">Sebagai seorang programmer, saya melihat dunia sebagai sekumpulan tantangan yang dapat diselesaikan dengan logika, kreativitas, dan ketekunan. Setiap baris kode yang saya tulis bukan sekadar rangkaian perintah untuk komputer, tetapi juga representasi dari cara saya berpikir dan memecahkan masalah. Menjadi seorang programmer bukan hanya tentang memahami bahasa pemrograman, tetapi juga tentang membangun solusi yang efisien, dapat diandalkan, dan mudah dipahami oleh orang lain. Saya percaya bahwa pemrograman adalah seni yang menggabungkan analisis mendalam dengan inovasi tanpa batas.</string>
+    <string name="edit_profil">Edit Profil</string>
+</resources>
