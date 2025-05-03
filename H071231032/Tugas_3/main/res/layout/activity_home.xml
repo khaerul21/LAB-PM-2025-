@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingBottom="48dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".activity.HomeActivity">
+
+            <!-- Top Bar -->
+            <Toolbar
+                android:id="@+id/top_bar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:elevation="4dp">
+
+                <TextView
+                    android:text="Instagram"
+                    android:textStyle="bold"
+                    android:textSize="26sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </Toolbar>
+
+            <!-- Highlight RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerHighlights"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="16dp"
+                android:orientation="horizontal"
+                android:clipToPadding="false"
+                android:overScrollMode="never" />
+
+            <!-- Feed RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerFeed"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Sticky Bottom Bar -->
+    <Toolbar
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp">
+            <!-- [Keep all bottom bar content same as original] -->
+            <ImageView
+                android:id="@+id/home_activity"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_home" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_search"
+                android:layout_marginLeft="54dp" />
+            <ImageView
+                android:id="@+id/new_post_activity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_add"
+                android:layout_marginLeft="54dp" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_reels"
+                android:layout_marginLeft="54dp"/>
+            <ImageView
+                android:id="@+id/profile_activity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ig_profile"
+                android:layout_marginLeft="54dp"
+                android:background="@drawable/circle_background"
+                android:clipToOutline="true" />
+        </LinearLayout>
+    </Toolbar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
