@@ -33,21 +33,7 @@
             android:layout_height="30dp"
             android:layout_margin="16dp"
             android:contentDescription="icon setting"
-            android:layout_gravity="top|
-
-
-
-
-
-
-
-
-
-
-
-
-
-            end"
+            android:layout_gravity="top|end"
             android:src="@drawable/setting" />
 
     </FrameLayout>
@@ -67,7 +53,7 @@
             android:id="@+id/nama_saya"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nailah"
+            android:text="Chelsea Shelin P.."
             android:textColor="@color/white"
             android:textSize="25sp"
             android:layout_marginTop="8dp"
@@ -77,7 +63,7 @@
             android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nailaahh"
+            android:text="Celziii"
             android:textSize="19sp"
             android:textColor="@color/gray"
             android:fontFamily="@font/open_sans" />
@@ -231,7 +217,7 @@
         android:text="Ringkasan"
         android:textSize="20sp"
         android:fontFamily="@font/robotoslab_black"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="15dp"
         android:textColor="@color/white"
         android:layout_marginStart="13dp"
         app:layout_constraintTop_toBottomOf="@id/batas"
@@ -302,7 +288,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp"
+            android:padding="7dp"
             android:orientation="horizontal"
             android:weightSum="2"
             android:paddingTop="5dp"
@@ -448,7 +434,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
         android:layout_marginStart="13dp"
         android:layout_marginEnd="13dp"
         app:layout_constraintBottom_toTopOf="@id/garis_batas2">
