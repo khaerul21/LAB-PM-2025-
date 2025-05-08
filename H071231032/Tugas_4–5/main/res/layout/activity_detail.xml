@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_detail"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#705245"
+        app:titleTextColor="@android:color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"> <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/iv_detail_cover"
+            android:layout_width="150dp"
+            android:layout_height="225dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:srcCompat="@drawable/placeholder_cover"/>
+
+        <TextView
+            android:id="@+id/tv_detail_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            app:layout_constraintTop_toTopOf="@id/iv_detail_cover"
+            app:layout_constraintStart_toEndOf="@id/iv_detail_cover"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Judul Buku Sangat Panjang"/>
+
+        <TextView
+            android:id="@+id/tv_detail_author"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_title"
+            app:layout_constraintStart_toStartOf="@id/tv_detail_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Nama Penulis"/>
+
+        <TextView
+            android:id="@+id/tv_detail_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_author"
+            app:layout_constraintStart_toStartOf="@id/tv_detail_author"
+            tools:text="Tahun: 2023"/>
+
+        <TextView
+            android:id="@+id/tv_detail_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/chip_background"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/black"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_detail_year"
+            app:layout_constraintStart_toEndOf="@+id/tv_detail_year"
+            tools:text="Genre" />
+
+        <RatingBar
+            android:id="@+id/rb_detail_rating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:numStars="5"
+            android:stepSize="0.1"
+            android:isIndicator="true"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_year"
+            app:layout_constraintStart_toStartOf="@id/tv_detail_year"
+            tools:rating="4.5"/>
+
+
+        <ToggleButton
+            android:id="@+id/toggle_like"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/selector_like_button"
+            android:textOn=""
+            android:textOff=""
+            app:layout_constraintBottom_toBottomOf="@id/rb_detail_rating"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_blurb_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Blurb"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintTop_toBottomOf="@id/iv_detail_cover"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_detail_blurb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintTop_toBottomOf="@id/tv_blurb_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Ini adalah deskripsi blurb yang cukup panjang untuk melihat bagaimana teks ini akan ditampilkan dalam beberapa baris. Teks ini seharusnya cukup untuk mengisi ruang yang tersedia."/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>
