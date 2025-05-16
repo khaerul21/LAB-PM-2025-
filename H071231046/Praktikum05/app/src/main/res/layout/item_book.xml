@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Container dengan latar belakang warna -->
+    <FrameLayout
+        android:id="@+id/colorBackground"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="0dp"/>
+
+    <!-- Gambar buku -->
+    <ImageView
+        android:id="@+id/imageCover"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:contentDescription="Book Cover"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:src="@drawable/cv_beranitidakdisukai"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Konten teks di atas latar -->
+    <LinearLayout
+        android:id="@+id/infoContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        app:layout_constraintStart_toEndOf="@id/imageCover"
+        app:layout_constraintTop_toTopOf="@id/imageCover"
+        app:layout_constraintBottom_toBottomOf="@id/imageCover"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="berani tidak disukai"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/textAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ichiro Kishimi and Fumitake Koga"
+            android:textSize="14sp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tvGenre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Self Improvement"
+            android:textColor="#ffffff"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tvBlurb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blurb"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:textSize="10sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:isIndicator="true"
+                android:progressDrawable="@drawable/rating_star"
+                android:padding="0dp"
+                android:layout_margin="0dp" />
+
+            <TextView
+                android:id="@+id/tvRatingNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="8dp"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
