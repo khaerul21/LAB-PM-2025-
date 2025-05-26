@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Top Bar with Back Button and Check Button -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kata ganti"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_toEndOf="@id/backButton"
+            android:layout_marginStart="24dp"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/saveButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_check"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#333333"
+        app:layout_constraintTop_toBottomOf="@id/topBar" />
+
+    <!-- Kata Ganti Input Field -->
+    <EditText
+        android:id="@+id/kataGantiEditField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="Tambahkan kata ganti Anda"
+        android:textColorHint="#777777"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <!-- Language Buttons ScrollView -->
+    <HorizontalScrollView
+        android:id="@+id/languageButtonsScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/kataGantiEditField">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/languageRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/btnBahasaInggris"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:background="@drawable/kataganti_language_button_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="Bahasa Inggris"
+                    android:textColor="@drawable/kataganti_language_text_selector"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp" />
+
+                <RadioButton
+                    android:id="@+id/btnSpanyol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:background="@drawable/kataganti_language_button_selector"
+                    android:button="@null"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="Spanyol"
+                    android:textColor="@drawable/kataganti_language_text_selector"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp" />
+
+                <RadioButton
+                    android:id="@+id/btnPortugis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:background="@drawable/kataganti_language_button_selector"
+                    android:button="@null"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="Portugis"
+                    android:textColor="@drawable/kataganti_language_text_selector"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp" />
+
+                <RadioButton
+                    android:id="@+id/btnPrancis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:background="@drawable/kataganti_language_button_selector"
+                    android:button="@null"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="Prancis"
+                    android:textColor="@drawable/kataganti_language_text_selector"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp" />
+
+                <RadioButton
+                    android:id="@+id/btnJerman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:background="@drawable/kataganti_language_button_selector"
+                    android:button="@null"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="Jerman"
+                    android:textColor="@drawable/kataganti_language_text_selector"
+                    android:textAllCaps="false"
+                    android:gravity="center" />
+            </RadioGroup>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Help Text -->
+    <TextView
+        android:id="@+id/helpText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="24dp"
+        android:textColor="#AAAAAA"
+        android:textSize="14sp"
+        android:text="Tambahkan hingga 4 kata ganti ke profil Anda agar orang-orang tahu bagaimana cara memanggil Anda. Anda bisa mengedit atau menghapusnya kapan saja."
+        app:layout_constraintTop_toBottomOf="@id/languageButtonsScroll" />
+
+    <TextView
+        android:id="@+id/linkPelajariSelengkapnya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pelajari selengkapnya"
+        android:textColor="#3897F0"
+        android:textSize="14sp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@id/helpText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Show Only to Followers Setting -->
+    <RelativeLayout
+        android:id="@+id/followersOnlySection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="24dp"
+        app:layout_constraintTop_toBottomOf="@id/linkPelajariSelengkapnya">
+
+        <TextView
+            android:id="@+id/followersOnlyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tampilkan hanya kepada pengikut"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <Switch
+            android:id="@+id/followersOnlySwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:checked="true"
+            android:thumbTint="#3897F0"
+            android:trackTint="#333333" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:textColor="#AAAAAA"
+        android:textSize="14sp"
+        android:text="Jika diaktifkan, hanya orang yang mengikuti Anda yang akan melihat kata ganti Anda."
+        app:layout_constraintTop_toBottomOf="@id/followersOnlySection" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
