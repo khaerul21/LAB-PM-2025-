@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purplePrimary">#A259D1</color>       <!-- Ungu paling gelap -->
+    <color name="purpleSecondary">#C986DC</color>     <!-- Ungu menengah -->
+    <color name="purpleTertiary">#E2B1E8</color>      <!-- Ungu muda -->
+    <color name="purpleLight">#F0CDED</color>         <!-- Latar belakang konten -->
+    <color name="purpleExtraLight">#FDE6F5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
