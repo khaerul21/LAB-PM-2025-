@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">onstagram</string>
+    <string name="add_post">Add Post</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="posts">Posts</string>
+    <string name="johndoe">johndoe</string>
+    <string name="digital_creator_n_jakarta_indonesia_n_johndoe_com">Digital Creator 🎨\n📍 Jakarta, Indonesia\n🌐 johndoe.com</string>
+    <string name="back">Back</string>
+    <string name="plus">+</string>
+    <string name="feed_image">Feed Image</string>
+</resources>

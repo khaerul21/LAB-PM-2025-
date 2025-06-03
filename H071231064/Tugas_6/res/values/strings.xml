@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">rickmorty</string>
+    <string name="origin">Origin:</string>
+    <string name="last_known_location">Last Known Location:</string>
+    <string name="character_image">Character Image</string>
+    <string name="placeholder">placeholder</string>
+    <string name="gender">Gender</string>
+</resources>
