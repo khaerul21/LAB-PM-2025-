@@ -1,0 +1,104 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Cover Image -->
+        <ImageView
+            android:id="@+id/image_detail_cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/book_cover"
+            android:src="@drawable/ic_launcher_foreground" />
+
+        <!-- Book Title -->
+        <TextView
+            android:id="@+id/text_detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Book Title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+        <!-- Book Author -->
+        <TextView
+            android:id="@+id/text_detail_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Author Name"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/darker_gray" />
+
+        <!-- Book Year -->
+        <TextView
+            android:id="@+id/text_detail_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Year"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/text_detail_genre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Genre"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/darker_gray" />
+
+        <!-- Book Rating -->
+        <TextView
+            android:id="@+id/text_detail_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Rating"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/darker_gray" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Book Blurb -->
+        <TextView
+            android:id="@+id/text_detail_blurb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Blurb"
+            android:textSize="16sp"
+            android:lineSpacingExtra="6dp"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/button_like"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Like"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>
