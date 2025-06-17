@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101C1D"
+    android:padding="16dp"
+    tools:context=".MenuSetting">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/titleSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pengaturan"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#808B8C"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/txtBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="#00C0FF"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_alignParentEnd="false"
+            android:layout_marginEnd="4dp"/>
+    </RelativeLayout>
+
+    <!-- Section Akun -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Akun"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp" />
+
+    <!-- Menu items -->
+    <Button
+        android:id="@+id/settingpreferensi"
+        style="@style/SettingMenuButton"
+        android:text="Preferensi" />
+
+    <Button
+        android:id="@+id/settingprofil"
+        style="@style/SettingMenuButton"
+        android:text="Profil" />
+
+    <Button
+        android:id="@+id/settingnotifikasi"
+        style="@style/SettingMenuButton"
+        android:text="Notifikasi" />
+
+    <Button
+        android:id="@+id/settingkursus"
+        style="@style/SettingMenuButton"
+        android:text="Kursus" />
+
+    <Button
+        android:id="@+id/settingduolingoschool"
+        style="@style/SettingMenuButton"
+        android:text="Duolingo for Schools" />
+
+    <Button
+        android:id="@+id/settingprivasi"
+        style="@style/SettingMenuButton"
+        android:text="Pengaturan privasi" />
+
+    <!-- Section Dukungan -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dukungan"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/settingbantuan"
+        style="@style/SettingMenuButton"
+        android:text="Pusat Bantuan" />
+
+    <Button
+        android:id="@+id/settingsaran"
+        style="@style/SettingMenuButton"
+        android:text="Saran" />
+
+    <!-- Logout -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KELUAR"
+        android:textColor="#00C0FF"
+        android:background="@drawable/bg_button_outline"
+        android:layout_marginTop="24dp" />
+
+    <!-- Ketentuan -->
+    <TextView
+        android:id="@+id/terms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KETENTUAN"
+        android:textColor="#00C0FF"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

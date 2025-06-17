@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyLibraryApp" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/lightblue</item>
+        <item name="colorPrimaryVariant">@color/darkblue</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/gray_light</item>
+        <item name="colorSecondaryVariant">@color/gray_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
+    </style>
+
+    <style name="Theme.MyLibraryApp" parent="Base.Theme.MyLibraryApp" />
+
+    <style name="BottomNavigationViewStyle" parent="Widget.Design.BottomNavigationView">
+        <item name="itemTextColor">@color/black</item>
+        <item name="itemIconTint">@color/black</item>
+        <item name="backgroundTint">@color/lightblue</item>
+    </style>
+
+    <style name="CustomConstraintLayoutStyle">
+        <item name="android:backgroundTint">@color/white</item> <!-- Ubah sesuai warna yang diinginkan -->
+    </style>
+
+</resources>

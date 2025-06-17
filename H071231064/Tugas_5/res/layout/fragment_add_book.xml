@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_book_preview"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="Preview Gambar Buku"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#DDDDDD"
+            tools:src="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/btn_select_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Gambar"
+            app:layout_constraintTop_toBottomOf="@id/img_book_preview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Input Judul -->
+        <EditText
+            android:id="@+id/et_judul"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Judul Buku"
+            app:layout_constraintTop_toBottomOf="@id/btn_select_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Input Penulis -->
+        <EditText
+            android:id="@+id/et_penulis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Penulis"
+            app:layout_constraintTop_toBottomOf="@id/et_judul"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp" />
+
+        <!-- Input Tahun Terbit -->
+        <EditText
+            android:id="@+id/et_tahun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Tahun Terbit"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/et_penulis"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp" />
+        <EditText
+            android:id="@+id/et_blurb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            app:layout_constraintTop_toBottomOf="@id/et_tahun"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp" />
+
+        <!-- Tombol Simpan -->
+        <Button
+            android:id="@+id/btn_simpan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simpan Buku"
+            app:layout_constraintTop_toBottomOf="@id/et_blurb"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/iv_book_cover"
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:srcCompat="@drawable/placeholder_cover" /> <TextView
+        android:id="@+id/tv_book_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        app:layout_constraintStart_toEndOf="@id/iv_book_cover"
+        app:layout_constraintTop_toTopOf="@id/iv_book_cover"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Judul Buku Yang Panjang Sekali Contohnya" />
+
+        <TextView
+            android:id="@+id/tv_book_author"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            app:layout_constraintStart_toStartOf="@id/tv_book_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_book_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Nama Penulis" />
+
+        <TextView
+            android:id="@+id/tv_book_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintStart_toStartOf="@id/tv_book_author"
+            app:layout_constraintTop_toBottomOf="@id/tv_book_author"
+            tools:text="Tahun: 2023" />
+
+        <TextView
+            android:id="@+id/tv_book_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/chip_background"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="#705245"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_book_year"
+            app:layout_constraintStart_toEndOf="@+id/tv_book_year"
+            tools:text="Genre" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

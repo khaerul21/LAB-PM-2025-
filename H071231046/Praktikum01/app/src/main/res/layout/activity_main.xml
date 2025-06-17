@@ -1,0 +1,539 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Duolinggo_Background"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Gambar karakter -->
+        <ImageView
+            android:id="@+id/char_image"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:contentDescription="User profile image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/duolingo_char" />
+
+        <!-- Ikon setting -->
+        <ImageView
+            android:id="@+id/setting_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="16dp"
+            android:contentDescription="icon setting"
+            android:layout_gravity="top|end"
+            android:src="@drawable/setting" />
+
+    </FrameLayout>
+
+    <!--    Bio-->
+    <LinearLayout
+        android:id="@+id/bio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="13dp"
+        app:layout_constraintTop_toBottomOf="@id/fragment_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/nama_saya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chelsea Shelin P.."
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/open_sans_medium"/>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Celziii"
+            android:textSize="19sp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/open_sans" />
+
+        <TextView
+            android:id="@+id/join_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bergabung Agustus 2021"
+            android:textSize="14sp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/open_sans"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pengikut_mengikuti"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="13dp"
+        app:layout_constraintTop_toBottomOf="@id/bio"
+        android:fontFamily="@font/open_sans_semibold">
+
+        <TextView
+            android:id="@+id/following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9 Mengikuti"
+            android:textColor="@color/silver"
+            android:textSize="16sp"
+            android:fontFamily="@font/robotoslab_black"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9 Pengikut"
+            android:textColor="@color/silver"
+            android:fontFamily="@font/robotoslab_black"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!--    Bendera-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="13dp"
+        android:layout_margin="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_container">
+
+        <ImageView
+            android:id="@+id/flag_usa"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/flag_usa"
+            android:layout_marginBottom="3dp"/>
+
+        <ImageView
+            android:id="@+id/flag_china"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/flag_china"
+            android:layout_marginBottom="3dp"/>
+
+
+        <!--        -->
+        <!--        <ImageView-->
+        <!--            android:id="@+id/flag_china"-->
+        <!--            android:layout_width="50dp"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:src="@drawable/flag_china"-->
+        <!--            android:layout_marginBottom="3dp"/>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="1dp"
+        android:layout_margin="13dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/pengikut_mengikuti"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTambahTeman"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="300dp"
+            android:layout_height="54dp"
+            android:backgroundTint="@android:color/transparent"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center"
+            android:iconTint="@color/blue"
+            android:text="TAMBAHKAN TEMAN"
+            android:textAllCaps="true"
+            android:textColor="@color/blue_light"
+            android:textSize="18sp"
+            app:icon="@drawable/add"
+            app:iconGravity="textStart"
+            app:iconSize="30dp"
+            app:iconTint="@color/blue_light"
+            app:layout_constraintTop_toBottomOf="@id/pengikut_mengikuti"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/gray_light"
+            app:strokeWidth="2dp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShare"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:gravity="center"
+            android:backgroundTint="@android:color/transparent"
+            app:icon="@drawable/share"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconSize="30dp"
+            app:iconTint="@color/blue_light"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/gray_light"
+            app:cornerRadius="5dp"
+            app:layout_constraintTop_toTopOf="@id/btnTambahTeman"
+            app:layout_constraintStart_toEndOf="@id/btnTambahTeman"
+            android:contentDescription="Share button"/>
+
+    </LinearLayout>
+
+    <!-- Garis Pemisah -->
+    <View
+        android:id="@+id/batas"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/add"
+        android:layout_height="3dp"
+        android:layout_marginTop="13dp"
+        android:background="@color/gray_light" />
+
+    <TextView
+        android:id="@+id/ringkasan_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ringkasan"
+        android:textSize="20sp"
+        android:fontFamily="@font/robotoslab_black"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
+        android:layout_marginStart="13dp"
+        app:layout_constraintTop_toBottomOf="@id/batas"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <GridLayout
+        android:id="@+id/grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@id/ringkasan_title"
+        android:padding="5dp">
+
+
+        <!-- Kotak Pertama : Baris Pertama Kolom Pertama-->
+        <LinearLayout
+            android:id="@+id/kotak_pertama"
+            android:background="@drawable/outline_boder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:paddingTop="5dp"
+            android:paddingStart="10dp"
+            android:outlineSpotShadowColor="@color/gray_light"
+            app:strokeWidth="5px"
+            android:layout_row="0"
+            app:layout_constraintWidth_percent="0.45"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_column="0">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_fire" />
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                android:paddingStart="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_margin="0dp"
+                    android:layout_marginStart="8dp"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Runtunan Harian"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Kotak Kedua: Baris Kedua Kolom Pertama -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:paddingTop="5dp"
+            android:paddingStart="10dp"
+            android:layout_row="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/outline_boder"
+            android:layout_column="0">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_safir" />
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                android:paddingStart="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_margin="0dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Safir"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Liga saat ini"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Kotak Ketiga: Baris Pertama Kolom Kedua -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_gravity="top|end"
+            android:paddingTop="5dp"
+            android:paddingStart="10dp"
+            android:layout_row="0"
+            android:layout_marginEnd="10dp"
+            android:layout_column="1"
+            app:layout_constraintWidth_percent="0.45"
+            android:background="@drawable/outline_boder">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_xp" />
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                android:paddingStart="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_margin="0dp"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="8dp"
+                    android:text="9441"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total XP"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Kotak Keempat: Posisi 3 Besar -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:paddingTop="5dp"
+            android:paddingStart="10dp"
+            android:layout_row="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_column="1"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="top|end"
+            android:background="@drawable/outline_boder"
+            app:layout_constraintWidth_percent="0.45">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_medal" />
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                android:paddingStart="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_margin="0dp"
+                    android:layout_marginStart="8dp"
+                    android:text="3"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Posisi 3 besar"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+    </GridLayout>
+
+
+    <LinearLayout
+        android:id="@+id/pencapaian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        app:layout_constraintBottom_toTopOf="@id/garis_batas2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pencapaian"
+            android:fontFamily="@font/robotoslab_black"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <!-- Gunakan layout_weight untuk memberikan ruang otomatis di tengah -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:text="Lihat Semua"
+            android:fontFamily="@font/robotoslab_black"
+            android:textColor="@color/blue_light"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/garis_batas2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="13dp"
+        android:background="@color/gray_light"
+        app:layout_constraintBottom_toTopOf="@id/icon"
+        />
+
+    <LinearLayout
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" >
+
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/home"
+            android:contentDescription="@null"
+            android:layout_marginEnd="3dp"
+            android:layout_marginStart="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/icon3"
+            android:contentDescription="@null"
+            android:layout_marginEnd="3dp"
+            android:layout_marginStart="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/icon4"
+            android:contentDescription="@null"
+            android:layout_marginEnd="3dp"
+            android:layout_marginStart="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/icon5"
+            android:contentDescription="@null"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/icon11"
+            android:contentDescription="@null"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"/>
+
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/icon6"
+            android:contentDescription="@null"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

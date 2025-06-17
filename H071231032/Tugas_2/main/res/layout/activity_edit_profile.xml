@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/edit_profile_root"
+    tools:context=".EditProfileActivity">
+
+    <Toolbar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/back_to_profile"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/back_icon"
+                android:contentDescription="Back"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:id="@+id/edit_profile_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Edit profile"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="32dp" />
+
+            <ImageButton
+                android:id="@+id/save_profile_button"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/baseline_check_24"
+                android:scaleType="centerInside"
+                android:enabled="false"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Save Changes"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+    </Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginVertical="16dp">
+
+        <ImageView
+            android:id="@+id/profile_image_edit" android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/circle_background"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true" />
+
+        <TextView
+            android:id="@+id/change_profile_pict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change profile picture"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edit_text_name" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:layout_marginHorizontal="16dp" android:layout_marginBottom="8dp"
+        android:padding="12dp" android:background="@drawable/edit_text_bg" />
+
+    <EditText
+        android:id="@+id/edit_text_username" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:inputType="text"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg" />
+
+    <EditText
+        android:id="@+id/edit_text_bio" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Bio"
+        android:inputType="textMultiLine"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"
+        android:minLines="3" android:gravity="top" android:background="@drawable/edit_text_bg" />
+
+</LinearLayout>

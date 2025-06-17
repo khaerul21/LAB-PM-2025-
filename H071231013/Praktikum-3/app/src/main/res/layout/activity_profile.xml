@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ProfileActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#121212"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- NavBar -->
+            <RelativeLayout
+                android:id="@+id/topBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/backButton"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:id="@+id/usernameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/backButton"
+                    android:layout_marginStart="16dp"
+                    android:text="labsisfo.uh"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Add verification badge -->
+                <ImageView
+                    android:id="@+id/verifiedBadge"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_toEndOf="@id/usernameText"
+                    android:layout_marginStart="4dp"
+                    android:layout_alignTop="@id/usernameText"
+                    android:layout_marginTop="3dp"
+                    android:src="@drawable/ic_verified"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_more" />
+            </RelativeLayout>
+
+            <!-- Profile nya -->
+            <LinearLayout
+                android:id="@+id/profileSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/topBar"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/profile_image_frame" />
+
+                        <ImageView
+                            android:id="@+id/profilePic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/lab_logo"
+                            android:clipToOutline="true"
+                            android:background="@drawable/circle_shape"
+                            android:elevation="0dp" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/profileNameText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lab Sistem Informasi | UNHAS"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="10dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="24"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="posts"
+                                    android:textColor="#AAAAAA"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="437"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="followers"
+                                    android:textColor="#AAAAAA"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="77"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="following"
+                                    android:textColor="#AAAAAA"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/bioText1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Build your world with your code"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/bioText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Praktikum Sistem Informasi 2025-1"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/bioText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pemrograman Mobile | Pemrograman Berorientasi Objek"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See translation"
+                        android:textColor="#3897F0"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/websiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="youtube.com/@livelab_7si+151_vIQwMjzpHX8"
+                        android:textColor="#3897F0"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/messageButton"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#1E1E1E"
+                        android:text="Edit profil"
+                        android:textColor="#FFFFFF"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/shareButton"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#1E1E1E"
+                        android:text="Bagikan profil"
+                        android:textColor="#FFFFFF"
+                        android:textAllCaps="false" />
+
+                    <ImageButton
+                        android:layout_width="36dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="4dp"
+                        android:background="#1E1E1E"
+                        android:src="@drawable/ic_person_add"
+                        android:scaleType="fitCenter"
+                        android:padding="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Temukan orang section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Temukan orang"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lihat semua"
+                        android:textColor="#3897F0"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Profile suggestion 1 -->
+                        <LinearLayout
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal"
+                            android:padding="8dp"
+                            android:background="#1E1E1E"
+                            android:layout_marginEnd="8dp">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/ic_bangrang"
+                                    android:background="@drawable/circle_shape"
+                                    android:padding="4dp"
+                                    android:scaleType="centerCrop"
+                                    android:layout_gravity="center_horizontal" />
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_close"
+                                    android:layout_gravity="top|end"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="4dp" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nusantara"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="14sp"
+                                android:layout_marginTop="8dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Disarankan untuk Anda"
+                                android:textColor="#AAAAAA"
+                                android:textSize="12sp"
+                                android:layout_marginTop="2dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp"
+                                android:text="Ikuti"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:background="@drawable/button_shape"
+                                android:backgroundTint="@color/instagram_blue"
+                                android:layout_marginTop="8dp" />
+                        </LinearLayout>
+
+                        <!-- Profile suggestion 2 -->
+                        <LinearLayout
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal"
+                            android:padding="8dp"
+                            android:background="#1E1E1E"
+                            android:layout_marginEnd="8dp">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/ic_bangrang"
+                                    android:background="@drawable/circle_shape"
+                                    android:padding="4dp"
+                                    android:scaleType="centerCrop"
+                                    android:layout_gravity="center_horizontal" />
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_close"
+                                    android:layout_gravity="top|end"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="4dp" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nusantara"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="14sp"
+                                android:layout_marginTop="8dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Disarankan untuk Anda"
+                                android:textColor="#AAAAAA"
+                                android:textSize="12sp"
+                                android:layout_marginTop="2dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp"
+                                android:text="Ikuti"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:background="@drawable/button_shape"
+                                android:layout_marginTop="8dp" />
+                        </LinearLayout>
+
+                        <!-- Profile suggestion 3 -->
+                        <LinearLayout
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal"
+                            android:padding="8dp"
+                            android:background="#1E1E1E"
+                            android:layout_marginEnd="8dp">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/ic_bangrang"
+                                    android:background="@drawable/circle_shape"
+                                    android:padding="4dp"
+                                    android:scaleType="centerCrop"
+                                    android:layout_gravity="center_horizontal" />
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_close"
+                                    android:layout_gravity="top|end"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="4dp" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nusantara"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="14sp"
+                                android:layout_marginTop="8dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Disarankan untuk Anda"
+                                android:textColor="#AAAAAA"
+                                android:textSize="12sp"
+                                android:layout_marginTop="2dp" />
+
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp"
+                                android:text="Ikuti"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:background="@drawable/button_shape"
+                                android:backgroundTint="@color/instagram_blue"
+                                android:layout_marginTop="8dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!-- Highlights section with horizontal scrolling -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:clipToPadding="false">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal">
+
+                    <!-- SBD 2024 Highlight -->
+                    <LinearLayout
+                        android:id="@+id/sbdHighlight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="2dp"
+                            android:src="@drawable/highlight_1"
+                            android:clipToOutline="true"
+                            android:background="@drawable/circle_shape" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="SBD 2024"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- WEB 2024 Highlight -->
+                    <LinearLayout
+                        android:id="@+id/webHighlight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="2dp"
+                            android:src="@drawable/highlight_3"
+                            android:clipToOutline="true"
+                            android:background="@drawable/circle_shape" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="WEB 2024"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- PBO 2024 Highlight -->
+                    <LinearLayout
+                        android:id="@+id/pboHighlight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="2dp"
+                            android:src="@drawable/highlight_2"
+                            android:clipToOutline="true"
+                            android:background="@drawable/circle_shape" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="PBO 2024"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- AP 2024 Highlight -->
+                    <LinearLayout
+                        android:id="@+id/apHighlight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="2dp"
+                            android:src="@drawable/highlight_4"
+                            android:clipToOutline="true"
+                            android:background="@drawable/circle_shape" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="AP 2024"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Mobile Dev Highlight -->
+                    <LinearLayout
+                        android:id="@+id/mobileDevHighlight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="2dp"
+                            android:src="@drawable/highlight_5"
+                            android:clipToOutline="true"
+                            android:background="@drawable/circle_shape" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Mobile Dev"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- DSS Highlight -->
+                    <LinearLayout
+                        android:id="@+id/dssHighlight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="2dp"
+                            android:src="@drawable/highlight_1"
+                            android:clipToOutline="true"
+                            android:background="@drawable/circle_shape" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="DSS 2024"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Database Highlight -->
+                    <LinearLayout
+                        android:id="@+id/dbHighlight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="2dp"
+                            android:src="@drawable/highlight_3"
+                            android:clipToOutline="true"
+                            android:background="@drawable/circle_shape" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Database"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/tabsSection"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <!-- Grid Tab -->
+                <LinearLayout
+                    android:id="@+id/gridTab"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/gridTabIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_grid"
+                        android:contentDescription="Grid view" />
+
+                    <View
+                        android:id="@+id/gridTabIndicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="3dp"
+                        android:background="#FFFFFF"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <!-- Feed Tab -->
+                <LinearLayout
+                    android:id="@+id/feedTab"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/feedTabIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_feed"
+                        android:contentDescription="Feed view"
+                        android:alpha="0.5" />
+
+                    <View
+                        android:id="@+id/feedTabIndicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="3dp"
+                        android:background="#FFFFFF"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <!-- Tagged Tab -->
+                <LinearLayout
+                    android:id="@+id/taggedTab"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/taggedTabIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_tagged"
+                        android:contentDescription="Tagged posts"
+                        android:alpha="0.5" />
+
+                    <View
+                        android:id="@+id/taggedTabIndicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="3dp"
+                        android:background="#FFFFFF"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Content container for different post views -->
+            <FrameLayout
+                android:id="@+id/postContentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Grid Posts RecyclerView (default visible) -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/postsGridRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="300dp"
+                    android:padding="1dp"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="false"
+                    app:spanCount="3"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    tools:listitem="@layout/item_profile_grid"
+                    tools:itemCount="9" />
+
+                <!-- Feed Posts RecyclerView (initially invisible) -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/postsFeedRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="300dp"
+                    android:nestedScrollingEnabled="false"
+                    android:visibility="gone"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="vertical"
+                    tools:listitem="@layout/item_post"
+                    tools:itemCount="3" />
+
+                <!-- Tagged Posts RecyclerView (initially invisible) -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/postsTaggedRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="300dp"
+                    android:padding="1dp"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="false"
+                    android:visibility="gone"
+                    app:spanCount="3"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    tools:listitem="@layout/item_profile_grid"
+                    tools:itemCount="6" />
+
+                <!-- Move empty state view here inside the container -->
+                <LinearLayout
+                    android:id="@+id/emptyStateView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="300dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@drawable/ic_camera"
+                        android:tint="#888888" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="No Posts Yet"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="When you share photos, they'll appear on your profile."
+                        android:textAlignment="center"
+                        android:layout_marginHorizontal="32dp"
+                        android:textColor="#888888" />
+
+                    <Button
+                        android:id="@+id/createFirstPostButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Share Your First Photo"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/instagram_blue" />
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000000"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@drawable/ic_home" />
+
+        <ImageView
+            android:id="@+id/navSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@drawable/ic_search" />
+
+        <ImageView
+            android:id="@+id/navAdd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@drawable/ic_add_post" />
+
+        <ImageView
+            android:id="@+id/navReels"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@drawable/ic_reels" />
+
+        <ImageView
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:padding="12dp"
+            android:src="@drawable/ic_profile" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

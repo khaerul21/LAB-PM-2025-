@@ -1,0 +1,5 @@
+<resources>
+    <!-- Navigation bar icon sizes -->
+    <dimen name="nav_icon_size">16dp</dimen>
+    <dimen name="nav_icon_padding">12dp</dimen>
+</resources>

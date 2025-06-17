@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Local SQLite Yusran</string>
+    <string name="name">Name</string>
+    <string name="nim">NIM</string>
+    <string name="save">Save</string>
+    <string name="change">Change</string>
+    <string name="delete">Delete</string>
+</resources>

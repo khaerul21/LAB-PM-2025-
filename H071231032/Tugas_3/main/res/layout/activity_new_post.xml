@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:id="@+id/new_post_layout">
+
+    <!-- Top Bar -->
+    <Toolbar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="4dp">
+
+        <TextView
+            android:text="New Feed"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar"
+        android:padding="16dp">
+
+        <!-- Preview gambar dipilih -->
+        <ImageView
+            android:id="@+id/image_preview"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:scaleType="fitCenter"
+            android:background="#EEE"
+            android:src="@drawable/placeholder_feed"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Input caption -->
+        <EditText
+            android:id="@+id/caption_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Write the caption..."
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Tombol cancel dan save -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:foreground="@drawable/btn_black_border"
+                android:text="Cancel" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:foreground="@drawable/btn_black_border"
+                android:text="Save" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Sticky Bottom Bar -->
+    <Toolbar
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp">
+            <!-- [Keep all bottom bar content same as original] -->
+            <ImageView
+                android:id="@+id/home_activity"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_home" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_search"
+                android:layout_marginLeft="54dp" />
+            <ImageView
+                android:id="@+id/new_post_activity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_add"
+                android:layout_marginLeft="54dp" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_reels"
+                android:layout_marginLeft="54dp"/>
+            <ImageView
+                android:id="@+id/profile_activity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ig_profile"
+                android:layout_marginLeft="54dp"
+                android:background="@drawable/circle_background"
+                android:clipToOutline="true" />
+        </LinearLayout>
+    </Toolbar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

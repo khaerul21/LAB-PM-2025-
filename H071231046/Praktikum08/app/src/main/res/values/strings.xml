@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Praktikum08</string>
+    <string name="judul">Judul</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="submit">Submit</string>
+    <string name="change">Change</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Warna latar belakang (optional) -->
+    <solid android:color="@color/Duolinggo_Background" />
+
+    <!-- Border / outline -->
+    <stroke android:color="@color/gray"
+        android:width="1dp" />
+
+    <corners android:radius="5dp" />
+</shape>

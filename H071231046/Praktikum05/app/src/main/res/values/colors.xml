@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="soft_purple">#ebccff</color>
+    <color name="purple">#A57CD7</color>
+    <color name="search_background">#F2F2F2</color>
+
+    <color name="book_bg_1">#F8A5C2</color>
+    <color name="book_bg_2">#66c2ff</color>
+    <color name="book_bg_3">#E77F67</color>
+    <color name="book_bg_4">#63cdda</color>
+    <color name="book_bg_5"> #b380ff</color>
+
+</resources>
