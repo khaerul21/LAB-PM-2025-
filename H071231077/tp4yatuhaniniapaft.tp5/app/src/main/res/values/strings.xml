@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">tp4jegel2.0</string>
+    <string name="favorite_button">Toggle favorite</string>
+    <string name="author_format">By %s</string>
+    <string name="year_format">Published in %d</string>
+    <string name="genre_format">Genre: %s</string>
+</resources>
